@@ -3,16 +3,16 @@ import re
 import copy
 import fitz
 import os
-os.system("pdf2txt.py -o Bauman.xml Bauman.pdf")
+os.system("pdf2txt.py -o Bauman.xml Bauman.pdf") # <-- Edit info
 
-tree = ET.parse('D:/ReadPDF/pdfprocess/Bauman.xml')
+tree = ET.parse('D:/ReadPDF/pdfprocess/Bauman.xml') # <-- Edit info
 root = tree.getroot()
 requiredFont = "CourierNewPSMT"
 answers = ''
 paragraph = []
 sentence_words = []
 sentences = []
-givenDictionary = [{'cat':'communication', 'syn' : ['I am straight', 'determined', 'forward'], 'color': (1, 0, 0)}, {'cat':'planning', 'syn' : ['challenge'], 'color': (1, 1, 0)}]
+givenDictionary = [{'cat':'communication', 'syn' : ['I am straight', 'determined', 'forward'], 'color': (1, 0, 0)}, {'cat':'planning', 'syn' : ['challenge'], 'color': (1, 1, 0)}] # <-- Edit info
 # actualDictionary = {"Commnunication": ['I am straight', 'determined', 'forward'], "Staffing": ['challenge']}
 actualDictionary = {}
 
@@ -69,7 +69,7 @@ for words in actualDictionary:
                     matchedSentences[words].append(lines)
                 # print(lines)
 # print(matchedSentences)
-doc = fitz.open('Bauman.pdf')
+doc = fitz.open('Bauman.pdf') # <-- Edit info
 getTotalNoOfPages = doc.pageCount
 # print('getTotalNoOfPages', getTotalNoOfPages)
 
